@@ -1,0 +1,486 @@
+/*
+ * Copyright (c) 2016, MedLex, www.medlex.nl
+ */
+*
+{
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+label, input
+{
+    font-family:arial, helvetica, sans-serif;
+    font-size:small;
+}
+ 
+body
+{
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: text;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    
+    background:transparent;
+    margin:0;
+    padding:0;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    overflow:hidden;
+}
+
+#stiekum
+{
+    position:absolute;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    padding:0;
+    margin:0;
+    overflow:hidden;
+    background:#ffffff;
+}
+
+#wrapper
+{
+    position:absolute;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    padding:0;
+    margin:0;
+    overflow:hidden;
+    background:#ffffff;
+}
+
+#headWrap
+{
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    height:70px;
+}
+
+#header
+{
+    position:absolute;
+    top:20px;
+    left:0px;
+    right:0px;
+    height:30px;
+    background:#cfcfcf;
+}
+ 
+#icon
+{
+    position:absolute;
+    top:10px;
+    left:5px;
+    width:50px;
+    height:50px;
+    background:transparent url("../img/logo.png") center no-repeat;
+    background-size:50px;
+}
+
+#text
+{
+    font-family:arial, helvetica, sans-serif;
+    font-size:medium;
+    position:absolute;
+    top:0px;
+    left:50px;
+    right:0px;
+    bottom:0px;
+    padding-left:15px;
+    line-height:30px;
+    text-align:left
+}
+
+#dimerInput
+{
+    position:absolute;
+    top:80px;
+    height:auto;
+    left:0px;
+    right:0px;
+    padding-left:10px;
+}
+
+#ycdr
+{
+    display:block;
+    font-family:arial, helvetica, sans-serif;
+    font-size:medium;
+    position:absolute;
+    top:110px;
+    left:0px;
+    right:0px;
+    height:auto;
+    padding-left:10px;
+}
+
+#ycdr td
+{
+    line-height:26px;
+    height:26px;
+}
+
+#ycdr label
+{
+    padding-top:6px;
+    line-height:26px;
+}
+
+#ddimer
+{
+    position:absolute;
+    display:block;
+    top:230px;
+    right:30px;
+    left:30px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    font-family:arial, helvetica, sans-serif;
+    font-size:medium;
+    font-weight:bold;
+    color:#ffffff;
+    background:#8d96ec;
+
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+}
+
+#ddimer:hover
+{
+    background:#6d76cc;
+}
+
+#measure
+{
+    position:absolute;
+    top:260px;
+    right:0px;
+    left:0px;
+    height:0px;
+
+    overflow:hidden;
+    padding-left:10px;
+
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease; /* For Safari 3.1 to 6.0 */
+}
+
+#show
+{
+    position:absolute;
+    display:none;
+    top:340px;
+    right:30px;
+    left:30px;
+    height:40px;
+    line-height:40px;
+
+    text-align:center;
+    font-family:arial, helvetica, sans-serif;
+    font-size:medium;
+    font-weight:bold;
+    color:#ffffff;
+    background:#8d96ec;
+
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease; /* For Safari 3.1 to 6.0 */
+}
+
+#opening
+{
+    position:absolute;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    padding:0;
+    margin:0;
+    overflow:hidden;
+    background:#ffffff;
+
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease; /* For Safari 3.1 to 6.0 */
+}
+
+.name
+{
+    position:absolute;
+    top:40px;
+    left:0px;
+    right:0px;
+    height:auto;
+    
+    font-family:calibri, arial, helvetica, sans-serig;
+    font-size:60px;
+    color:#000000;
+    text-align:center;
+}
+
+.medlex
+{
+    position:absolute;
+    bottom:10px;
+    right:10px;
+    height:60px;
+    width:120px;
+    
+    background:transparent url("../img/medlex.jpg") right no-repeat;
+    background-size:120px;
+}
+
+.lumc
+{
+    position:absolute;
+    bottom:10px;
+    left:30px;
+    height:60px;
+    width:120px;
+    
+    background:transparent url("../img/logo-lumc-eng.png") left no-repeat;
+    background-size:120px;
+}
+
+.disclaim
+{
+    position:absolute;
+    top:150px;
+    left:0px;
+    right:0px;
+    bottom:60px;
+    
+    padding-left:10px;
+    padding-right:10px;
+    
+    font-family:calibri, arial, helvetica, sans-serig;
+    font-size:small;
+    color:#000000;
+    text-align:left;
+}
+
+.explain
+{
+    position:absolute;
+    top:100px;
+    left:0px;
+    right:0px;
+    bottom:60px;
+    
+    padding-left:10px;
+    padding-right:10px;
+    
+    font-family:calibri, arial, helvetica, sans-serig;
+    font-size:small;
+    color:#000000;
+    text-align:left;
+}
+
+#accept
+{
+    position:absolute;
+    display:block;
+    bottom:10px;
+    right:30px;
+    left:30px;
+    height:40px;
+    line-height:40px;
+    text-align:center;
+    font-family:arial, helvetica, sans-serif;
+    font-size:medium;
+    font-weight:bold;
+    color:#ffffff;
+    background:#8d96ec;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+}
+
+#redo
+{
+    position:absolute;
+    top:10px;
+    right:5px;
+    background:transparent;
+
+    height:50px;
+    width:50px;
+    background:transparent url("../img/redo1.png") center no-repeat;
+    background-size:50px;
+}
+
+#redo:hover
+{
+    background:transparent url("../img/redo2.png") center no-repeat;
+    background-size:50px;
+}
+
+#menu
+{
+    position:absolute;
+    top:10px;
+    right:60px;
+    background:transparent;
+
+    height:50px;
+    width:50px;
+    background:transparent url("../img/menu1.png") center no-repeat;
+    background-size:50px;
+}
+
+#menu:hover
+{
+    background:transparent url("../img/menu2.png") center no-repeat;
+    background-size:50px;
+}
+
+#result
+{
+    position:absolute;
+    left:0px;
+    right:0px;
+    top:78px;
+    bottom:50px;
+    padding-left:10px;
+    padding-right:10px;
+    margin:0;
+    overflow:hidden;
+    background:#ffffff;
+
+    font-family:arial, helvetica, sans-serif;
+    font-size:medium;
+    font-weight:medium;
+    color:#000000;
+    
+    opacity:0;
+    transform: scale(0);
+    -webkit-transform:scale(0);
+    -moz-transform:scale(0);
+
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease; /* For Safari 3.1 to 6.0 */
+}
+
+#menuBox
+{
+    display:block;
+    position:absolute;
+    background:#dadada;
+    color:#000000;
+    right:10px;
+    top:70px;
+    height:auto;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left:0;
+    padding-right:0;
+    margin:0;
+    width:auto;
+
+    opacity:0;
+    transform: scale(0);
+    -webkit-transform:scale(0);
+    -moz-transform:scale(0);
+
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    box-shadow: 0 1px 3px rgba(0,0,0,.3);
+}
+
+#menuBox hr
+{
+    width:100%;
+    height:1px;
+    background: #000000;
+}
+
+#menuBox ul
+{
+    text-decoration:none;
+    list-style-type:none;
+    display: block;
+    margin:0;
+    padding:0;
+}
+
+#menuBox li
+{
+    margin:0;
+}
+
+#menuBox a
+{
+    display:block;
+    text-decoration:none;
+
+    font-family:arial, helvetica, sans-serif;
+    font-size:medium;
+    color:#000000;
+    background-color:#dadada;
+
+    height:35px;
+    line-height:35px;
+    label:pointer;
+    padding-left:20px;
+    padding-right:60px;
+}
+
+#menuBox a:hover
+{
+    background-color:#cdcdcd;
+}
+
+#verantwoording
+{
+    position:absolute;
+    left:0px;
+    right:0px;
+    top:0px;
+    bottom:0px;
+    padding:0;
+    margin:0;
+    overflow:hidden;
+    background:#ffffff;
+    
+    opacity:0;
+    transform: scale(0);
+    -webkit-transform:scale(0);
+    -moz-transform:scale(0);
+
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.noshow
+{
+    position:absolute;
+    left:10px;
+    bottom:70px;
+    height:28px;
+    line-height:28px;
+}
+
+#dimerInput input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
