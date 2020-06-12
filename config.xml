@@ -1,8 +1,8 @@
 <widget xmlns="http://www.w3.org/ns/widgets"
 	xmlns:gap="http://phonegap.com/ns/1.0"
 	id="nl.alexanderengberts.years"
-	versionCode="10"
-	version="1.0.0">
+	versionCode="101"
+	version="1.0.1">
   <name>Years</name>
   <description>Years steps determining the likelyhood of Pulmonary Embolism</description>
   <author href="http://alexanderengberts.nl" email="info@alexanderengberts.nl">MedLex</author>
@@ -99,7 +99,7 @@
 
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
-    <allow-intent href="mailto:*" />
+<!--    <allow-intent href="mailto:*" /> -->
     <platform name="android">
         <allow-intent href="market:*" />
     </platform>
