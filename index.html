@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2015 MedLex BV
+
+    http://www.alexanderengberts.nl
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.
+-->
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <meta name="format-detection" content="telephone=no" />
+      <meta name="msapplication-tap-highlight" content="no" />
+      <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+<!--      <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" /> -->
+      <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, content="width=device-width" />
+      <link rel="stylesheet" type="text/css" href="css/years.css" />
+      <link rel="stylesheet" type="text/css" href="css/checkbox.css" />
+      
+      <script type="text/javascript" src="js/years.js"></script>
+    <title>YEARS</title>
+</head>
+
+<body>
+    <div id="stiekum" onclick="showMenu(0);">
+        <div id="wrapper">
+            <div id="headWrap">
+                <div id="header">
+                    <div id="text">Clinical Decision Rule</div>
+                </div>
+                <div id="redo" onclick="redo();"></div>
+                <div id="menu" onclick="showMenu(1);"></div>
+                <div id="icon"></div>
+            </div>
+            <div id="dimerInput">
+                <label for="dimerValue">HS D-dimer (ng/ml)&nbsp;&nbsp;</label>
+                <input id="dimerValue" type="number" step="1" />
+            </div>
+            <div id="ycdr">
+                <table>
+                    <tr>
+                        <td valign="middle">
+                            <input id="signs" type="checkbox" name="item" onclick="checkYears();" />
+                            <label for="signs">&nbsp;&nbsp;Clinical signs of Deep Venous Trombosis</label><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="middle">
+                            <input id="hemo" type="checkbox" name="item" onclick="checkYears();" />
+                            <label for="hemo">&nbsp;&nbsp;Hemoptysis</label><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="middle">
+                            <input id="alternative" type="checkbox" name="item" onclick="checkYears();" />
+                            <label for="alternative">&nbsp;&nbsp;Alternative diagnosis less likely than PE</label><br />
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div id="ddimer" onclick="showResult ();">Continue with 0 Years items</div>
+           <div id="result"></div>
+            <div id="menuBox" onclick="">
+                <ul>
+                    <li><a href="#" class="large" onclick="showVerantwoording();" onmouseup="showVerantwoording();">Introduction</a></li>
+                </ul>
+            </div>
+
+            <div id="verantwoording">
+                <div id="headWrap">
+                    <div id="header">
+                        <div id="text">Clinical Decision Rule</div>
+                    </div>
+                    <div id="icon"></div>
+                </div>
+<!--             <div class="name">YEARS</div><br /> -->
+                <div class="explain">
+                    <h1>Introduction</h1>
+                    <p>The YEARS method is developed to provide an unambiguous set of criteria for determining the necessity of a CTPA
+                       in case of a suspected Pulmonary Embolism</p>
+                    <p>This method is based on a combination of clinical items and the D-dimer test result value. The clinical YEARS items determine the D-dimer threshold</p>
+                    <p>In case of suspected Pulmonary Embolism, the blood D-dimer  must be immediately tested. Then follow the YEARS algorithm in this app</p>
+                    <div class="noshow"><input  style="height:30px;line-height:30px;" id="noShowAgain" type="checkbox" />
+                       <label style="height:30px;line-height:30px;padding-top:4px;" for="noShowAgain">&nbsp;&nbsp;Do not show this message again</label>
+                    </div>
+                    <div id="accept" onclick="onClickVerant();">Close</div>
+                </div>
+            </div>
+
+            <div id="opening">
+                <div class="name">YEARS</div><br />
+                <div class="disclaim">
+                    <h1>Disclaimer</h1>
+                    <p>This software supports you to identify the necessity of a CTPA in case of a suspected Pulmonary Embolism.<br />
+                       This app is based on objective criteria, according to the "Years" method.</p>
+                    <p>This software only supports your decision process. Making the correct decision is explicitly your own responsibility</p>
+                    <p>MedLex declines all responsability for incorrect decisions, even if these are caused by errors in this software
+                       or in the data on which is is based.</p>
+                    <p>You explicitly accept these terms by using this software</p>
+                    <div id="accept" onclick="onClickAccepteer();">Accept</div>
+                </div>
+            </div>
+            <div class="medlex"></div>
+            <div class="lumc"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        initialize();
+    </script>
+</body>
+
+</html>
